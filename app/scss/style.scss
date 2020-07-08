@@ -215,3 +215,51 @@
     border: 1px solid #fff;
 }
   
+// end search
+//start advantage
+
+.advantage__inner {
+    padding: 185px 0px 120px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.advantage__item {
+    width: 360px;
+    border-radius: 4px;
+    padding-bottom: 45px;
+    &:hover {
+        box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+    }
+    &-icon {
+        min-height: 195px;
+        padding-top: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-title {
+        color: #000;
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    &-text {
+        padding: 0 32px;
+        color: #555555;
+        line-height: 30px;
+    }
+
+}
+
+.BG {
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+    position: absolute;
+    left: 780px;
+    top: 1091px;
+    width: 361px;
+    height: 403px;
+    z-index: 692;
+  }
+  
