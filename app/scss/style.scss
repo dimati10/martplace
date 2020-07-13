@@ -737,7 +737,7 @@
 }
   
 //end products
-//star followers
+//start followers-slider
 .followers-slider {
     padding: 120px 0 90px;
     background-color: $bggray;
@@ -759,4 +759,72 @@
     margin-left: -15px;
     margin-right: -15px;
 }
-  
+
+//end followers-slider
+//start statistics
+
+.statistics {
+     background-color: #212225;
+     min-height: 350px;
+}
+.statistics__inner {
+    padding: 90px 0;
+    display: flex;
+    justify-content: space-between;
+}  
+.statistics__item {
+    max-width: 200px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    
+    span {
+        display: block;
+        font-size: 36px;
+        margin-bottom: 15px;
+        padding-top: 85px;
+        position: relative;
+        &::before {
+            font-family: 'Linearicons-Free';
+            font-size: 48px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }   
+    }
+}
+.sale {
+    span {
+        color: #feb71d;
+        &::before {
+            content: "\e84c";
+        }
+    }
+}
+.total-sales {
+    span {
+        color: #58c9e9;
+        &::before {
+            content: "\e80b";
+        }
+    }
+}
+.customers {
+    span {
+        color: #77de51;
+        &::before {
+            content: "\e854";
+        }
+    }
+}
+.members {
+    span {
+        color: #ff6a6d;
+        &::before {
+            content: "\e82b";
+        }
+    }
+}
+
+//end statistics
