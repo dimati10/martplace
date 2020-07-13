@@ -828,3 +828,119 @@
 }
 
 //end statistics
+//start choose
+
+.choose {
+    padding: 110px 0 90px;
+    text-align: center;
+    background-color: #fff;
+}
+.choose__title {
+    font-size: 36px;
+    margin-bottom: 30px;
+    span {
+        color: $blue;
+    }
+}
+.choose__text {
+    max-width: 690px;
+    font-size: 16px;
+    line-height: 30px;
+    color: $gray;
+    margin: 0 auto 50px auto;
+}
+.choose__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.choose__item {
+    max-width: 361px;
+    margin-bottom: 30px;
+    padding: 150px 34px 50px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+    position: relative;
+    &-title {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    &-text {
+        font-size: 16px;
+        line-height: 30px;
+        color: $gray; 
+       
+    }
+    &::before {
+        font-size: 48px;
+        color: #e5eafe;
+        font-weight: 300;
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        
+    }
+    &::after {
+        font-family: 'Linearicons-Free';
+        font-size: 60px;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.payment {
+    &::before {
+        content: "01";
+    }
+    &::after {
+        content: "\e822";
+        color: $blue;
+    }
+}
+.quality {
+    &::before {
+        content: "02";
+    }
+    &::after {
+        content: "\e803";
+        color: #7f4ec2;
+    }
+}
+.secure {
+    &::before {
+        content: "03";
+    }
+    &::after {
+        content: "\e80f";
+        color: #77de51;
+    }
+}
+.well-code {
+    &::before {
+        content: "04";
+    }
+    &::after {
+        content: "\e843";
+        color: #feb71d;
+    }
+}
+.update {
+    &::before {
+        content: "05";
+    }
+    &::after {
+        content: "\e849";
+        color: #58c9e9;
+    }
+}
+.support {
+    &::before {
+        content: "06";
+    }
+    &::after {
+        content: "\e831";
+        color: #ff6a6d;
+    }
+}
+//end choose
