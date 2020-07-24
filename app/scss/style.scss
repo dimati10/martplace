@@ -1276,4 +1276,29 @@
 //end benefits
 //start joining
 
+.joining {
+    background-image: linear-gradient( to left, rgb(13,62,242) 0%, rgb(64,48,201) 46%, rgb(114,33,160) 100%);
+}
+.joining__inner {
+    padding: 103px 0 110px;
+    text-align: center;
+}
+.joining__title {
+    color: #fff;
+}
+.joining__desc {
+    color: #e7e7e7;
+    font-size: 18px;
+    margin-bottom: 49px;
+}
+.joining__btn {
+    min-width: 190px;
+    font-size: 16px;
+    color: $blue;
+    background-color: #fff;
+    padding: 19px; 
+    border-radius: 28px;
+}
 //end joining
+
+  
