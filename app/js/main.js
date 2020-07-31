@@ -1,7 +1,7 @@
 $(function () {
 
     $(".rate-star").rateYo({
-      rating: 4.5,
+      normalFill: "#ffffff",
       ratedFill: "#ffc000",
       starWidth: "15px",
       spacing: "4px",
@@ -9,7 +9,7 @@ $(function () {
     });
 
     $(".rate-products").rateYo({
-      rating: 4.5,
+      normalFill: "#ffffff",
       ratedFill: "#ffc000",
       starWidth: "13px",
       spacing: "4px",

@@ -8,9 +8,11 @@ a {
     display: inline-block;
     text-decoration: none;
 }
-ul, li {
+ul, ol, li, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
+}
+li {
     list-style: none;
 }
 body {
@@ -35,8 +37,15 @@ button {
     margin: 0 auto;
     // padding: 0 15px;
 }
+.btn {
+    font-size: 16px;
+    border-radius: 27px;
+    transition: all .3s;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+}
 .left-title {
     font-size: 30px;
+    font-weight: 400;
     background-color: #fff;
     padding: 40px 170px 40px 30px;
     border-radius: 4px;
@@ -44,6 +53,7 @@ button {
 }
 .center-title {
     font-size: 36px;
+    font-weight: 400;
     text-align: center;
     margin-bottom: 21px;
     span {
@@ -57,6 +67,15 @@ button {
     max-width: 680px;
     text-align: center;
     margin: 0 auto 39px;
+}
+.wordpress {
+    &::before {
+        content: "\e901";
+        font-family: 'icomoon';
+        font-size: 16px;
+        position: absolute;
+        left: 0;
+    }
 }
 .slick-arrow {
     width: 55px;
@@ -83,4 +102,8 @@ button {
         font-family: 'Linearicons-Free';
         font-size: 14px;
     }
+}
+.jq-ry-normal-group svg {
+    stroke: #ffc000;
+    stroke-width: 40;
 }
