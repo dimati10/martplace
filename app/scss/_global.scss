@@ -4,6 +4,10 @@ html {
 *, *::before, *::after {
     box-sizing: inherit;
 }
+html,
+body {
+	height: 100%;
+}
 a {
     display: inline-block;
     text-decoration: none;
@@ -21,6 +25,18 @@ body {
     font-size: 15px;
     color: #000;
 }
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.content {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
 button, input, select {
     outline: transparent;
 }
@@ -36,6 +52,9 @@ button {
     max-width: 1920px;
     margin: 0 auto;
     // padding: 0 15px;
+}
+.page-content {
+    background-color: #eff1f5;
 }
 .btn {
     font-size: 16px;
@@ -106,4 +125,31 @@ button {
 .jq-ry-normal-group svg {
     stroke: #ffc000;
     stroke-width: 40;
+}
+
+.breadcrumbs {
+    &__list {
+        li{
+            display: inline-block;
+            position: relative;
+            & + li {
+                padding-left: 24px;
+                &::before {
+                    content: '/';
+                    position: absolute;
+                    left: 7px;
+                    color: #fff;
+                }
+            }
+            &:last-child {
+                a,
+                span{
+                    color: #bfcad7;
+                }
+            }
+        }
+        a {
+            color: #fff;
+        }
+    }
 }
