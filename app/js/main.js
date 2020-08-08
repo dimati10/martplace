@@ -68,6 +68,26 @@ $(function () {
     $(this).next().slideToggle();
   });
 
+  $('.header__btn-menu').on('click', function () {
+    $('.header__box').addClass('active');
+  });
+  $('.lnr-cross').on('click', function () {
+    $('.header__box').removeClass('active');
+  });
+
+  $('.menu__btn').on('click', function () {
+    $('.menu__list').slideToggle();
+  });
+
+  $('.menu__drop-down').on('click', function () {
+    if (window.innerWidth < 841) {
+      $(this).children('.drop-down__box').slideToggle();
+      $(this).toggleClass('arrow-down');
+    }
+  });
+
+
+
   var mixer = mixitup('.products__inner-box');
 
 });

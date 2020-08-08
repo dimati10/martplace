@@ -14,9 +14,17 @@
     height: 100px;
     padding-left: 7px;
 }
+.header__logo {
+    a {
+        display: block;
+    }
+}
 .header__box {
     display: flex;
     align-items: center;
+    &-items {
+        display: flex;
+    }
 }
 .header__btn {
     font-size: 14px;
@@ -38,6 +46,7 @@
     margin-right: 41px;
 }
 .user {
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     &__avatar {
@@ -122,7 +131,7 @@
     opacity: 0;
     transition: opacity 0.3s;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
 }
 .notification__menu {
     left: -22px;
@@ -443,7 +452,6 @@
         padding-top: 25px;
     }
 }
-
 .subheader {
     background-color: #fff;
 }
@@ -484,7 +492,7 @@
     transition: opacity 0.2s;
     position: absolute;
     left: 0;
-    z-index: 1;
+    z-index: 20;
 }
 .drop-down__list {
     padding: 20px;
@@ -503,7 +511,7 @@
     }
     &.pages-menu__inner {
         padding: 30px 20px 13px;
-        width: 1140px;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         li {
@@ -527,6 +535,7 @@
     }
 }
 .pages-menu {
+    width: 100%;
     &__item {
         max-width: 425px;
         width: 100%;
@@ -550,12 +559,15 @@
         width: 100%;
     }
 }
+
 .subheader__search {
+    max-width: 360px;
+    width: 100%;
     position: relative;
     input {
         display: block;
+        width: 100%;
         color: #898f96;
-        width: 360px;
         height: 46px;
         border-radius: 23px;
         border: 1px solid #d9dfe5;
@@ -580,6 +592,12 @@
     }
 }
 
+.header__btn-menu,
+.lnr-cross,
+.menu__btn {
+    display: none;
+
+}
 // end header
 // start search
 
@@ -1072,11 +1090,12 @@
 }
 .products__inner-box {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    margin-left: -30px;
 }
 .products__item {
-    max-width: 360px;
+    flex-basis: calc(33.3333% - 30px);
+    margin-left: 30px;
     width: 100%;
     background-color: #fff;
     border-radius: 4px;
@@ -1815,7 +1834,8 @@
 .footer__copy-text {
     color: #999;
     text-align: center;
-    padding: 40px 0 40px;
+    padding: 37px 0;
+    line-height: 22px;
     span {
         color: #fff;
     }
@@ -2342,6 +2362,9 @@
         margin: 0;
         margin-bottom: 25px;
     }
+    .products__item-basket {
+        display: inline-block;
+    }
 }
 .list-item__rate {
     display: flex;
@@ -2371,3 +2394,5 @@
 //end product-page
 
   
+
+@import 'media';
