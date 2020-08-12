@@ -130,6 +130,10 @@ button {
 }
 
 .breadcrumbs {
+    background-image: linear-gradient( to left, rgb(13,62,242) 0%, rgb(45,47,199) 46%, rgb(76,31,156) 100%);
+    &__inner {
+        padding: 55px 0;
+    }
     &__list {
         li{
             display: inline-block;
@@ -153,5 +157,11 @@ button {
         a {
             color: #fff;
         }
+    }
+    &__title {
+        color: #fff;
+        font-size: 30px;
+        font-weight: 500;
+        margin-top: 20px;
     }
 }
