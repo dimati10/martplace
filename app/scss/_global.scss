@@ -135,6 +135,8 @@ button {
         padding: 55px 0;
     }
     &__list {
+        overflow: hidden;
+        width: 1170px;
         li{
             display: inline-block;
             position: relative;

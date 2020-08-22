@@ -508,6 +508,10 @@
             background-color: $blue;
         }
     }
+    .link-color {
+        color: $purp;
+        font-weight: 700;
+    }
     &.pages-menu__inner {
         padding: 30px 20px 13px;
         width: 100%;
@@ -621,14 +625,14 @@
     }
     &-text {
         font-size: 20px;
+        line-height: 30px;
         font-weight: 500;
         margin-bottom: 65px;
     }
     &-form {
         background-color: #fff;
-        padding: 0 40px;
+        padding: 40px;
         position: absolute;
-        height: 135px;
         width: 100%;
         left: 0;
         right: 0;
@@ -655,39 +659,9 @@
         }
         form {
             font-size: 16px;
-            height: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
-        }
-        input {
-            display: block;
-            max-width: 610px;
-            width: 100%;
-            height: 55px;
-            border: 1px solid #dcdcdc;
-            border-radius: 5px 0 0 5px;
-            color: #676767;
-            padding: 0 27px;
-            &::placeholder {
-                color: #676767;
-                
-            }
-        }
-        select {
-            display: block;
-            color: $gray;
-            width: 195px;
-            height: 55px;
-            padding: 0 54px 0 20px;
-            margin-right: auto;
-            border: 1px solid #dcdcdc;
-            border-left: none;
-            border-radius: 0 5px 5px 0;
-            appearance: none;
-            background-image: url('../images/icons/chevron-down.png');
-            background-repeat: no-repeat;
-            background-position: right 20px top 50%;
         }
         button {
             color: #fff;
@@ -698,7 +672,40 @@
             border: none;
             border-radius: 4px;
         }
-    
+    }
+    &-group {
+        max-width: 807px;
+        width: 100%;
+        position: relative;
+        input {
+            display: block;
+            width: 100%;
+            height: 55px;
+            border: 1px solid #dcdcdc;
+            border-radius: 5px;
+            color: #676767;
+            padding: 0 27px;
+            &::placeholder {
+                color: #676767;
+                
+            }
+        }
+        select {
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: $gray;
+            width: 195px;
+            height: 55px;
+            padding: 0 54px 0 20px;
+            border: 1px solid #dcdcdc;
+            border-radius: 0 5px 5px 0;
+            appearance: none;
+            background-image: url('../images/icons/chevron-down.png');
+            background-repeat: no-repeat;
+            background-position: right 20px top 50%;
+        }
+        
     }
 }
 .search__btn {
@@ -818,6 +825,9 @@
     background-color: #fff;
     border-radius: 4px;
     box-shadow: 0px 2px 30px 0px rgba(147, 155, 168, 0.1);
+    a {
+        outline: none;
+    }
     &-btn {
         text-align: center;
         height: 0;
@@ -848,21 +858,26 @@
     }
     &-img {
         position: relative;
+        max-width: 555px;
+        width: 100%;
         &:hover .slider__item-btn {
             height: 100%;
 
         }
         img {
             display: block;
-            width: 555px;
+            width: 100%;
             height: 100%;
             object-fit: cover;
         }
     }
     &-content {
+        max-width: 585px;
+        width: 100%;
         padding: 45px 50px 0;
     }
     &-title {
+        color: #000;
         font-size: 24px;
         font-weight: 500;
         margin-bottom: 15px;
@@ -928,6 +943,10 @@
             padding-right: 0;
         }
     }
+    &-stats {
+        display: flex;
+        align-items: center;
+    }
     &-price {
         background-color: $blue;
         color: #fff;
@@ -963,6 +982,9 @@
 .slider__inner .slick-arrow {
     background-color: $purp;
 }
+.slick-slide {
+    outline: none;
+}
 
 //end slider
 //start products
@@ -975,12 +997,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 30px;
+    padding: 0 30px;
     background-color: #fff;
     margin-bottom: 30px;
     box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
 }
 .products__title {
+    padding-left: 0;
     padding-right: 30px;
     box-shadow: none;
 }
@@ -1067,7 +1090,7 @@
 }
 .products__btn {
     background-color: #fff;
-    padding: 30px;
+    padding: 20px 30px 30px;
     margin-bottom: 50px;
     border-radius: 4px;
     box-shadow: 0px 1px 2px 0px rgba(90, 93, 100, 0.1);
@@ -1077,6 +1100,7 @@
         border: none;
         background-color: #f1f3f6;
         padding: 7px 18px;
+        margin-top: 10px;
         border-radius: 16px;
         & + button {
             margin-left: 4px;
@@ -1284,6 +1308,7 @@
     text-align: center;
 }
 .followers-slider .products__item {
+    text-align: left;
     display: inline-block;
     max-width: 361px;
     margin-left: 0;
@@ -1534,7 +1559,13 @@
         margin: 0 auto;
     }
 }
-
+.feedback-slider__title {
+    padding: 0 15px;
+}
+.feedback-slider__desc {
+    padding: 0 15px;
+    max-width: 710px;
+}
 .feedback-slider__inner {
     &-box {
         padding: 15px 15px 50px;
@@ -1586,8 +1617,9 @@
 .feedback-slider__author {
     display: flex;
     align-items: center;
+    padding-right: 70px;
     &-avatar {
-        width: 80px;
+        min-width: 80px;
         height: 80px;
         border-radius: 50%;
         margin-right: 19px;
@@ -1777,15 +1809,18 @@
 }
 .benefits__item-title {
     font-size: 24px;
+    line-height: 34px;
     font-weight: 400;
     text-align: center;
 }
 .guarantee-box__title {
+    padding-right: 15px;
     span {
         color: $blue;
     }
 }
 .support-box__title {
+    padding-left: 15px;
     span {
         color: $purp;
     }
@@ -2129,7 +2164,7 @@
     top: 19px;
 } 
 .filter-box {
-    height: 100px;
+    min-height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2153,7 +2188,6 @@
         }
     }
     &__control {
-        height: 100%;
         display: flex;
         align-items: center;
     }
@@ -2242,7 +2276,7 @@
 .product-page__items {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     margin-left: -30px;
 }
 
@@ -2503,7 +2537,7 @@
         background-color: #fff;
         border-bottom: 1px solid #e8e8e8;
         font-size: 17px;
-        padding: 20px 0;
+        padding: 20px 5px;
         cursor: pointer;
         & + .tab{
             border-left: 1px solid #e8e8e8;
@@ -2812,9 +2846,7 @@
     &__inner {
         display: flex;
         justify-content: space-between;
-    }
-    .products__item {
-        margin-left: 0;
+        margin-left: -30px;
     }
 }
 
@@ -2853,6 +2885,8 @@
     }
     &__img {
         display: block;
+        max-width: 393px;
+        width: 100%;
         margin: 0 auto 50px;
     }
     &__title {
@@ -2947,6 +2981,9 @@
         border-top: 3px solid #ff6a6c;
         border-radius: 4px;
         box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+        & + & {
+            margin-left: 20px;
+        }
         &.business {
             border-color: $blue;
             .pricing__item-link {
@@ -3062,6 +3099,10 @@
     background-color: #fff;
     &.upload {
         background-color: #eff1f5;
+        .manual__img {
+            margin-right: 0;
+            margin-left: 30px;
+        }
     }
 }
 .manual__inner {
@@ -3072,6 +3113,8 @@
 }
 .manual__img {
     max-width: 458px;
+    width: 100%;
+    margin-right: 30px;
     img {
         display: block;
         width: 100%;
@@ -3079,6 +3122,7 @@
 }
 .manual__content {
     max-width: 460px;
+    width: 100%;
 }
 .manual__content-title {
     font-size: 30px;
@@ -3113,6 +3157,13 @@
     padding-bottom: 120px;
     select + select {
         margin-left: 45px;
+    }
+    .filter-box {
+        min-height: 0;
+        height: 100px;
+    }
+    .filter-box__control {
+        height: 100%;
     }
     .pagination {
         justify-content: center;
@@ -3626,13 +3677,14 @@
     &-title {
         font-size: 24px;
         text-align: center;
-        padding: 55px 0 35px;
+        padding: 55px 10px 35px;
         margin-bottom: 40px;
         border-bottom: 1px solid #e8ebf0;
     }
     form {
         max-width: 750px;
         margin: 0 auto;
+        padding: 0 10px;
     }
     &-line {
         display: flex;

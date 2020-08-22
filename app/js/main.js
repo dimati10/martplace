@@ -26,21 +26,59 @@ $(function () {
 
   $('.slider__inner').slick({
     prevArrow: '<button class="slick-arrow slick-prev"></button>',
-    nextArrow: '<button class="slick-arrow slick-next"></button>'
+    nextArrow: '<button class="slick-arrow slick-next"></button>',
+    responsive: [
+      {
+        breakpoint: 921,
+        settings: {
+          arrows: false,
+          dots: true
+        }
+      }
+    ]
   });
 
   $('.followers-slider__content').slick({
     slidesToShow: 3,
     slidesToScroll: 3,
     prevArrow: '<button class="slick-arrow slick-prev"></button>',
-    nextArrow: '<button class="slick-arrow slick-next"></button>'
+    nextArrow: '<button class="slick-arrow slick-next"></button>',
+    responsive: [
+      {
+        breakpoint: 1201,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 921,
+        settings: {
+          arrows: false,
+          dots: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   });
 
   $('.feedback-slider__inner').slick({
     slidesToShow: 2,
     slidesToScroll: 2,
     prevArrow: '<button class="slick-arrow slick-prev"></button>',
-    nextArrow: '<button class="slick-arrow slick-next"></button>'
+    nextArrow: '<button class="slick-arrow slick-next"></button>',
+    responsive: [
+      {
+        breakpoint: 1151,
+        settings: {
+          arrows: false,
+          dots: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   });
 
   $(".js-range-slider").ionRangeSlider({
@@ -64,6 +102,7 @@ $(function () {
   })
 
   $('.aside__title').on('click', function () {
+    $(this).parent('.aside__item').toggleClass('ative');
     $(this).toggleClass('aside__title--closed');
     $(this).next().slideToggle();
   });
