@@ -2093,11 +2093,37 @@
         padding: 10px 0 9px;
         display: block;
     }
-    input {
-        padding-bottom: 25px;
-    }
     span {
-        margin-left: 10px;
+        padding-left: 20px;
+        position: relative;
+        &::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border: 1px solid #747b86;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 5px;
+        }
+        &::after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: $blue;
+            position: absolute;
+            left: 2px;
+            top: 7px;
+            opacity: 0;
+            transition: all .2s;
+        }
+    }
+    input {
+        display: none;
+        &:checked + span::after {
+            opacity: 1;
+        }
     }
 }
 .pricing-range {
@@ -2674,12 +2700,38 @@
     .multiuser {
         margin-bottom: 35px;
     }
-    input {
-        
-    }
     span {
-        margin-left: 15px;
-        
+        padding-left: 30px;
+        position: relative;
+        &::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border: 4px solid #e6e9ed;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+        &::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-image: url('../images/icons/check-radio.png');
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            opacity: 0;
+            transition: all .2s;
+        }
+    }
+    input {
+        display: none;
+        &:checked + span::after {
+            opacity: 1;
+        }
     }
     button {
         color: #fff;
@@ -3565,8 +3617,38 @@
         font-size: 16px;
         color: $gray;
     }
+    span {
+        padding-left: 30px;
+        position: relative;
+        &::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border: 4px solid #e6e9ed;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        &::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-image: url('../images/icons/check-radio.png');
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: all .2s;
+        }
+    }
     input {
-        margin-right: 15px;
+        display: none;
+        &:checked + span::after {
+            opacity: 1;
+        }
     }
 }
 .login__button {

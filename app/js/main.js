@@ -134,6 +134,7 @@ $(function () {
     return false;
   });
 
+  // $('input[type="checkbox"], input[type="radio"]').styler();
 
   var mixer = mixitup('.products__inner-box');
 
